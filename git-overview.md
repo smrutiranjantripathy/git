@@ -90,7 +90,7 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 Branches are timelines of commits.Branch names are labels to track those timeline of commits.
   - To create a branch 
     - `git brnach <branch-name>` 
-  *Important*: When we create a branch "A" while currently checked in at branch "B" , then branch A will get created and copy the contents of branch "A".Keep this in mind while creating branches.
+  **Important**: When we create a branch "A" while currently checked in at branch "B" , then branch A will get created and copy the contents of branch "A".Keep this in mind while creating branches.
   - To change a branch:
     - `git checkout <branch-name>`
   - To checkout and Create a branch in one command:
@@ -132,6 +132,11 @@ We do git fetch to update the refereces in the local repository to the newly cre
   - `git fetch <remote-name>` - To fetch from the concerned remote.
 
 #Git Pull
+Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local respository with the contents of remote repository.Its becuase git won't allow us to push changes in remote branch if our local branch is not updated with our remote branch.
+  - `git pull <remote-name> <branch-name>`
+  - `eg: git pull origin master`
+**Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
+
 
 
 
