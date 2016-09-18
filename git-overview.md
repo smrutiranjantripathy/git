@@ -158,6 +158,15 @@ Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local resp
   - `eg: git pull origin master`
 **Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
 
+##Git Reset
+Git reset moves the "HEAD" to a particular commit id.There are three types of reset.
+ 1. Soft :It will change where the head is pointing.It will preserve our staging area and the commit directory.
+ 2. Mixed: It will unstage those chnages but won't clean the working directory.
+ 3. Hard: It will unset those changes and will make the working directory clean.
+ 
+ - To Git reset to a particular commit-id.
+   - `git reset --soft/mixed/hard commit-id`
+
 ##Git Merge
 Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 
