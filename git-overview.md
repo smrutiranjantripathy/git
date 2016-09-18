@@ -36,6 +36,7 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 - `git init <repo-name>`
 - `eg: git init my-repo` -> "This will initiate a repo named my-repo"
 - `git init` inside a directory will initiate a repo with that name. 
+- After initiating git you wil notice "*.git*" folder.Don't delete or manhandle that folder.That folder is responsible for maintaing the version control in your local system.
     
 ## Git Structure
 1. Working Directory: This conatins all the files which are present in the local system which may or may not be a part of git version control system.
@@ -136,6 +137,18 @@ Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local resp
   - `git pull <remote-name> <branch-name>`
   - `eg: git pull origin master`
 **Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
+
+#Git Sub Modules
+It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. A common issue arises in these scenarios: you want to be able to treat the two projects as separate yet still be able to use one from within the other.Git addresses this issue using submodules. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
+  - To Add Submodule:
+    `git submodule add <url>`(You would notice .gitmodules.This contains the reference for submodules.)
+When we clone a repo with submodules in it we get the directories that contain submodules but none of the files in it.
+Then to get the modules
+  - `git submodule init`: to initialize your local configuration file
+  - `git submodule update`: to fetch all the data from that project and check out the appropriate commit listed in your superproject.
+  - To do it in one command:
+    - `git clone --recursive <url>`
+  
 
 
 
