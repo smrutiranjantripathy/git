@@ -20,9 +20,9 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 * User's Email
 ```git config --global user.email "name@example.com"```
 * To check global configuration
-```git config --global --list
+`git config --global --list`
           or
-   git config --global -e```
+ `git config --global -e`
 
 
 
