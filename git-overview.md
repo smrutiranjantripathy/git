@@ -45,8 +45,11 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 
 ##Normal Commit Procedure
 1. Modify the files or create new files using editor.
-2. Get the status of modified files using `git status`
-3. Check the difference in modification using `git diff`(if there is one file) or `git diff <file name>` (if there are many files)
+2. Get the status of modified or added files using:
+  - `git status`
+3. Check the difference in modification using git diff
+  - `git diff`(if there is one file) 
+  - `git diff <file name>` (if there are many files)
 4. Add the files to the Git Staging Area Using Git add:
   - `git add --all`(if you intend to add all files) 
 
