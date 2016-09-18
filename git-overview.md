@@ -86,8 +86,26 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 - `git config --global alias.<alias -name> "<command>"`
   - `eg: git config --global alias.hist "log --oneline --graph --decorate --all"`
 
+## Git Branching
+Branches are timelines of commits.Branch names are labels to track those timeline of commits.
+  - To create a branch 
+    - `git brnach <branch-name>` 
+  *Important*: When we create a branch "A" while currently checked in at branch "B" , then branch A will get created and copy the contents of branch "A".Keep this in mind while creating branches.
+  - To change a branch:
+    - `git checkout <branch-name>`
+  - To checkout and Create a branch in one command:
+    - `git checkout -b <branch-name>`
+  - To delete a branch:
+    - `git branch -D <branch-name>`
+  - If a branch is not created locally but is present remotely then checking out to that branch will bring the branch locally provided there is one remote , on the other hand if there are multiple remotes pointing to multiple repositories and they have branches with the same name, then `git checkout <branch-name>` won't work and we will have to explicitly mention the remote name as : `git checkout -b <branch name> <remote name>/<branch name>`  
+  `git checkout -b develope origin/develope` (To Checkout to branch develope of origin remote).
+  - To get a list of branches present in our local repository:
+    - `git branch`
+  - To get a list of local branches and references to remote branches:
+    - `git branch -a`
+  
 ## Git Clone
-We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.
+We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.It sets the default remote "origin" to the remote branch.
 - How to add ssh keys ?
   - Open Terminal Check if you have existing ssh key or not.
     `ls -al ~/.ssh`
@@ -97,14 +115,37 @@ We use git clone to clone a remote-repository in to local system.Cloning is done
     `ssh-keygen -t rsa -c <email>`
     `eg: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
   - Go to bitbucket or github settings page and add the keys in ssh section.
+  - Check your access as :
+    - `ssh -T git@bitbucket.org` (for bitbucket)
+    - `ssh -T git@github.com` (for github)
+  - Clone Commands:
+    - `git clone "ssh url"`
+    - `git clone "https url"
+    -  To clone a particular branch:
+    -  git clone "ssh url/https url" -b <branch name>`
+ - To check the remotes:
+   - `git remote -v` (It will show the remotes and the repositories to which they are pointing.
+   - 
+
+#Git Fetch 
+We do git fetch to update the refereces in the local repository to the newly created branches. Besides fetch also fetches the tags in remote repository and the commits.But fetch doesn't merge them with the local repository.
+  - `git fetch <remote-name>` - To fetch from the concerned remote.
+
+#Git Pull
+
+
+
+
+
+
+
 
 
 
 
 
   
-## Git Branching
-Branches are timelines of commits.Branch names are labels to track those timeline of commits.
+
 
 
   
