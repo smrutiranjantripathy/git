@@ -15,10 +15,19 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 ```sudo apt-get install git-all```
 
 ##Minimal Configuration
-* User's Name*
+* User's Name
 ```git config --global user.name "Your Name"```
-* User's Email*
+* User's Email
 ```git config --global user.email "name@example.com"```
+* To check global configuration
+```git config --global --list
+          or
+   git config --global -e```
+
+
+
+
+
 
 
 
