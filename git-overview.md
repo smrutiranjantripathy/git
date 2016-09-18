@@ -115,7 +115,16 @@ Branches are timelines of commits.Branch names are labels to track those timelin
     - `git branch -a`
   - To check the difference between two branches:
     - `git diff < branch name -1> < branch name-2>`
-  
+    
+##Git Stash
+ When we want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit. Stashes operate on the principle of stack.**LIFO(Last in first out)**.
+  - To stash your files:
+    - `git stash`
+  - To get a list of all stashes:
+    - `git stash list`
+  - To recover your file:
+    - `git stash pop`
+
 ## Git Clone
 We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.It sets the default remote "origin" to the remote branch.
 - How to add ssh keys ?
@@ -139,17 +148,17 @@ We use git clone to clone a remote-repository in to local system.Cloning is done
    - `git remote -v` (It will show the remotes and the repositories to which they are pointing.
    - 
 
-#Git Fetch 
+##Git Fetch 
 We do git fetch to update the refereces in the local repository to the newly created branches. Besides fetch also fetches the tags in remote repository and the commits.But fetch doesn't merge them with the local repository.
   - `git fetch <remote-name>` - To fetch from the concerned remote.
 
-#Git Pull
+##Git Pull
 Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local respository with the contents of remote repository.Its becuase git won't allow us to push changes in remote branch if our local branch is not updated with our remote branch.
   - `git pull <remote-name> <branch-name>`
   - `eg: git pull origin master`
 **Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
 
-#Git Merge
+##Git Merge
 Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 
 Assume the following history exists and the current branch is "master":
@@ -159,12 +168,27 @@ Assume the following history exists and the current branch is "master":
     D---E---F---G master
 Then "git merge topic" will replay the changes made on the topic branch since it diverged from master (i.e., E) until its current commit (C) on top of master, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.
 
+After Merge
+
+	  A---B---C topic
+	 /         \
+    D---E---F---G---H master
+
 Eg: To merge the changes in featured branch to parent branch.
   - 1. Move to parent merge
   - 2.`git merge <featured branch name>`
+  
+There are two types of merges:
+1.Fast-forward Merge.
+2.Three-way merge/Recursive Merge
+
+###Fast-forward Merge: 
 
 
-#Git Sub Modules
+  
+
+
+##Git Sub Modules
 It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. A common issue arises in these scenarios: you want to be able to treat the two projects as separate yet still be able to use one from within the other.Git addresses this issue using submodules. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
   - To Add Submodule:
     `git submodule add <url>`(You would notice .gitmodules.This contains the reference for submodules.)
