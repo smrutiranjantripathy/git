@@ -157,9 +157,10 @@ Assume the following history exists and the current branch is "master":
 	 /
     D---E---F---G master
 Then "git merge topic" will replay the changes made on the topic branch since it diverged from master (i.e., E) until its current commit (C) on top of master, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.
+
 Eg: To merge the changes in featured branch to parent branch.
-1. Move to parent merge
-2.`git merge <featured branch name>`
+  - 1. Move to parent merge
+  - 2.`git merge <featured branch name>`
 
 
 #Git Sub Modules
