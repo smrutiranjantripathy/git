@@ -62,8 +62,12 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
    - `git commit -m "Commit Message"` ( To commit the files)
    - `git commit` (This will open the editor to draft the commit message)
    - Express Commit: Express commit can be used only if the files are a part of version control system.
-     - How to get a list fo files which are a part of version control system
+     - How to get a list fo files which are a part of version control system ?
        - `git ls-files`
+     - Express commit adds and commits in one command
+       - `git commit -am "Commit Message"` (This will add and commit all those files which are part of version control) system and has been modified.
+       - `git commit -am "Commit Message" <file name>` ( If you intend to add and commit one file out of all those modified files which are a part of version control system. )
+     
    
     
 
