@@ -47,11 +47,25 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 1. Modify the files or create new files using editor.
 2. Get the status of modified or added files using:
   - `git status`
-3. Check the difference in modification using git diff
+3. Revert a modified file
+  - `git checkout <file name>`
+. Check the difference in modification using git diff
   - `git diff`(if there is one file) 
   - `git diff <file name>` (if there are many files)
 4. Add the files to the Git Staging Area Using Git add:
   - `git add --all`(if you intend to add all files) 
+  - `git add <file name>`(if you intend to add a particular file)
+  - If you intend too remove the added files
+    - `git reset HEAD`(if you intend to remove all files)
+    - `git reset HEAD <file>` (if you intend to remove a particular file)
+5. Commit the file
+   - `git commit -m "Commit Message"` ( To commit the files)
+   - `git commit` (This will open the editor to draft the commit message)
+   - Express Commit: Express commit can be used only if the files are a part of version control system.
+     - How to get a list fo files which are a part of version control system
+       - `git ls-files`
+   
+    
 
 
 
