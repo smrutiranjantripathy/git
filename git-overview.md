@@ -167,6 +167,9 @@ Git reset moves the "HEAD" to a particular commit id.There are three types of re
  - To Git reset to a particular commit-id.
    - `git reset --soft/mixed/hard commit-id`
 
+##Git Reflog
+Reflog is a mechanism to record history about the tip of the branches.Once you reset the tip of the branch to an earlier commit-id; git reflog helps to revert back as the git log is reset too.
+
 ##Git Merge
 Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 
