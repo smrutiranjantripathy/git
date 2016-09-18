@@ -100,6 +100,7 @@ Branches are timelines of commits.Branch names are labels to track those timelin
   **Important**: When we create a branch "A" while currently checked in at branch "B" , then branch A will get created and copy the contents of branch "A".Keep this in mind while creating branches.
   - To change a branch:
     - `git checkout <branch-name>`
+  However, before you do that, note that if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches or else stash your changes. 
   - To checkout and Create a branch in one command:
     - `git checkout -b <branch-name>`
   - To delete a branch:
