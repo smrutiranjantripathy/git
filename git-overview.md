@@ -33,8 +33,45 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
   - git <command> --help  *eg: git add --help*
   
 ## To Initiate a Local Git Repository:
-  - `git init <repo-name>`
-    - eg: `git init my-repo`
+- `git init <repo-name>`
+- *eg:* `git init my-repo` -> "This will initiate a repo named my-repo"
+- `git init` inside a directory will initiate a repo with that name. 
+    
+## Git Structure
+1. Working Directory: This conatins all the files which are present in the local system which may or may not be a part of git version control system.
+2. Satging Area: This contains all the files which are present in Staging Area.
+3. Repository: This contains the files which are commited to git repository.
+4. Remote-Repo: This is the repo where files are finally pushed after commit.eg *github.com or bitbucket.com*. The remote repo is a manifestation of the above three steps but it is maintained in a 3rd party server.
+
+##Normal Commit Procedure
+1. Modify the files or create new files using editor.
+2. Get the status of modified files using `git status`
+3. Check the difference in modification using `git diff`(if there is one file) or `git diff <file name>` (if there are many files)
+4. Add the files to the Git Staging Area Using Git add:
+  - `git add --all`(if you intend to add all files) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+    
   
 
    
