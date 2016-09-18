@@ -85,6 +85,29 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 ## Setting Alias for long commands
 - `git config --global alias.<alias -name> "<command>"`
   - `eg: git config --global alias.hist "log --oneline --graph --decorate --all"`
+
+## Git Clone
+We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.
+- How to add ssh keys ?
+  - Open Terminal Check if you have existing ssh key or not.
+    `ls -al ~/.ssh`
+  - If key is priorly genertaed then you will find a file as id_rsa.pub.
+    `cat ~/.ssh/id_rsa.pub and copy the contents to your clipboard.`
+  - If you don't have a ssh key generate ssh key as:
+    `ssh-keygen -t rsa -c <email>`
+    `eg: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+  - Go to bitbucket or github settings page and add the keys in ssh section.
+
+
+
+
+
+  
+## Git Branching
+Branches are timelines of commits.Branch names are labels to track those timeline of commits.
+
+
+  
   
 
      
