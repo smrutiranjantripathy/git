@@ -1,4 +1,5 @@
-**Cracking the Git Version Control System**
+#**Cracking the Git Version Control System**
+
 ##What is Git ?
 Git is the most widely used version controls system by developers community. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server
 
