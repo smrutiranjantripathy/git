@@ -70,6 +70,8 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
        - `git commit -am "Commit Message" <file name>` ( If you intend to add and commit one file out of all those modified files which are a part of version control system. )
     - To revert a local commit which has not been pushed to remote repository
       - `git reset HEAD~`(HEAD: Points to Last commit of Current branch)
+6. Pushing the commit to remote repository (github or bitbucket)
+   - `git push origin <branch-name>`
       
 ## Git Logs
 1. To Get logs
