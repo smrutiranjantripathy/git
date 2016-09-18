@@ -72,6 +72,10 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
       - `git reset HEAD~`(HEAD: Points to Last commit of Current branch)
 6. Pushing the commit to remote repository (github or bitbucket)
    - `git push origin <branch-name>`
+   git push used to push all the commits to all referenced branches below Git 2.0 but in version Git 2.0 and above it pushes to only the current branch.To maintain traditional behaviour the message would be:
+     -`git config --global push.default matching `
+   If we want to stick to new behaviour:
+     - `git config --global push.default simple`
       
 ## Git Logs
 1. To Get logs
@@ -100,12 +104,16 @@ Branches are timelines of commits.Branch names are labels to track those timelin
     - `git checkout -b <branch-name>`
   - To delete a branch:
     - `git branch -D <branch-name>`
+  - To delete a remote branch from local machine.
+    - `git push <remote name> :<branch name>`
   - If a branch is not created locally but is present remotely then checking out to that branch will bring the branch locally provided there is one remote , on the other hand if there are multiple remotes pointing to multiple repositories and they have branches with the same name, then `git checkout <branch-name>` won't work and we will have to explicitly mention the remote name as : `git checkout -b <branch name> <remote name>/<branch name>`  
   `git checkout -b develope origin/develope` (To Checkout to branch develope of origin remote).
   - To get a list of branches present in our local repository:
     - `git branch`
   - To get a list of local branches and references to remote branches:
     - `git branch -a`
+  - To check the difference between two branches:
+    - `git diff < branch name -1> < branch name-2>`
   
 ## Git Clone
 We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.It sets the default remote "origin" to the remote branch.
@@ -139,6 +147,20 @@ Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local resp
   - `git pull <remote-name> <branch-name>`
   - `eg: git pull origin master`
 **Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
+
+#Git Merge
+Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
+
+Assume the following history exists and the current branch is "master":
+
+	  A---B---C topic
+	 /
+    D---E---F---G master
+Then "git merge topic" will replay the changes made on the topic branch since it diverged from master (i.e., E) until its current commit (C) on top of master, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.
+Eg: To merge the changes in featured branch to parent branch.
+1. Move to parent merge
+2.`git merge <featured branch name>`
+
 
 #Git Sub Modules
 It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. A common issue arises in these scenarios: you want to be able to treat the two projects as separate yet still be able to use one from within the other.Git addresses this issue using submodules. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
