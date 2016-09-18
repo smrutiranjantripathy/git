@@ -161,7 +161,7 @@ Then to get the modules
       - `rm -rf path_to_submodule`
 
 # Github Gist and Github Organisation
-Gist are a simple way to share code either entire file or just part of files.Same as micro git repository.Its for sharing snippets of code.
+Gist are a simple way to share code either entire file or just part of files.Same as micro git repository.Its for sharing snippets of code.Snippets serve the same fucntion in bitbucket.
 
 Git hub Organisation are a group of related repositories.The same is team for bitbuket. It solves the problem of so many repositories owned by different persons in different accounts to one account.
 
