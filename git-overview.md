@@ -28,13 +28,13 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 
 ## Get Help
 - To get the list of commands avialble in Git
-  - git help
+  - `git help`
 - To get command specific help
-  - git <command> --help  *eg: git add --help*
+  - `git <command> --help`   `eg: git add --help`
   
 ## To Initiate a Local Git Repository:
 - `git init <repo-name>`
-- *eg:* `git init my-repo` -> "This will initiate a repo named my-repo"
+- `eg: git init my-repo` -> "This will initiate a repo named my-repo"
 - `git init` inside a directory will initiate a repo with that name. 
     
 ## Git Structure
@@ -69,7 +69,24 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
        - `git commit -am "Commit Message" <file name>` ( If you intend to add and commit one file out of all those modified files which are a part of version control system. )
     - To revert a local commit which has not been pushed to remote repository
       - `git reset HEAD~`
-    
+      
+## Git Logs
+1. To Get logs
+  - `git log`
+2. To get logs in meaningful format
+  - `git log --online --graph --decorate --all`
+    - --online : which will provide a simplified commit entry.
+    - --graph :provide an asterik based graph denoting branching hiearchy.
+    - --decorate : which will tell us which commits are a part of which branches.
+    - --all : which will provide the history of all branches that are available in the repository.
+3. To get logs of a particular file
+  - `git log <file name>`
+  
+## Setting Alias for long commands
+- `git config --global alias.<alias -name> "<command>"`
+  - `eg: git config --global alias.hist "log --oneline --graph --decorate --all"`
+  
+
      
    
     
