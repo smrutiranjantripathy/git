@@ -148,6 +148,19 @@ Then to get the modules
   - `git submodule update`: to fetch all the data from that project and check out the appropriate commit listed in your superproject.
   - To do it in one command:
     - `git clone --recursive <url>`
+  - To update the submodule with one command:
+    - `git submodule update --remote`
+  - To remove a submodule you need to:
+    - Delete the relevant section from the .gitmodules file.
+    - Stage the .gitmodules changes `git add .gitmodules`
+    - Delete the relevant section from .git/config.
+    - Run `git rm --cached path_to_submodule (no trailing slash).`
+    - Run rm -rf .git/modules/path_to_submodule
+    - Commit `git commit -m "Removed submodule <name>"`
+    - Delete the now untracked submodule files
+      - `rm -rf path_to_submodule`
+
+
   
 
 
