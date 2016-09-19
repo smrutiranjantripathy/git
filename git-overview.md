@@ -156,7 +156,9 @@ We do git fetch to update the refereces in the local repository to the newly cre
 Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local respository with the contents of remote repository.Its becuase git won't allow us to push changes in remote branch if our local branch is not updated with our remote branch.
   - `git pull <remote-name> <branch-name>`
   - `eg: git pull origin master`
-**Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . `git pull --rebase <remote-name> <branch-name>` `eg: git pull --rebase origin master`
+**Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . 
+`git pull --rebase <remote-name> <branch-name>` 
+`eg: git pull --rebase origin master`
 
 ##Git Reset
 Git reset moves the "HEAD" to a particular commit id.There are three types of reset.
