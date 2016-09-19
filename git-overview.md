@@ -178,13 +178,18 @@ Reflog is a mechanism to record history about the tip of the branches.Once you r
 Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 
 Assume the following history exists and the current branch is "master":
-
+          
+*The alpahbets represent commit-ids*          
+          
+          Before Merge
+        
 	  A---B---C topic
 	 /
     D---E---F---G master
 Then "git merge topic" will replay the changes made on the topic branch since it diverged from master (i.e., E) until its current commit (C) on top of master, and record the result in a new commit along with the names of the two parent commits and a log message from the user describing the changes.
 
-After Merge
+
+          After Merge
 
 	  A---B---C topic
 	 /         \
@@ -200,6 +205,7 @@ There are two types of merges:
 
 ###Fast-forward Merge:
 Whenever we come across a scenario where a "feature-branch" or any branch emerged from  master branch and the branch from which it emerged doesn't have any commits after that branch evolved. Then we can merge that branch staright forewared to that branch. The merge is called fast-foreward Merge 
+
           Before Merge
 
 	  A---B---C feature-branch
@@ -211,6 +217,29 @@ Whenever we come across a scenario where a "feature-branch" or any branch emerge
 	  A---B----C feature-branch
 	 /         |
     D---E -----F(merge commit) master
+    
+###Three-way recursive Merge:
+In another scenario the branch from which the "feature-branch" was created might have moved foreward with some more commits. In that scenario Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two.Instead of just moving the branch pointer forward, Git creates a new snapshot that results from this three-way merge and automatically creates a new commit that points to it. This is referred to as a merge commit, and is special in that it has more than one parent.
+    
+          Before Merge
+    
+       A---B---C(Snapshot to Merge in) feature-branch
+	  /         
+    D---E(common ancestor)--F--G--H--I--J(Snapshot to Merge Into) master branch
+ 
+
+ 
+          After Merge
+          
+      A---B------------C(Snapshot to Merge in)------------------ feature-branch
+	 /                                                           \            
+    D---E(common ancestor)--F--G--H--I--J(Snapshot to Merge Into)---K(Merge commit) master branch
+ 
+          
+         
+    
+
+
     
     
     
