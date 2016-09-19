@@ -208,7 +208,7 @@ Whenever we come across a scenario where a "feature-branch" or any branch emerge
     
           After Merge
 
-	  A---B---C feature-branch
+	  A---B----C feature-branch
 	 /         |
     D---E -----F(merge commit) master
     
