@@ -169,6 +169,8 @@ Git reset moves the "HEAD" to a particular commit id.There are three types of re
 
 ##Git Reflog
 Reflog is a mechanism to record history about the tip of the branches.Once you reset the tip of the branch to an earlier commit-id; git reflog helps to revert back as the git log is reset too.
+  - Git Reflog Command:
+    - `git reflog`
 
 ##Git Merge
 Join two or more development histories together.Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
@@ -194,7 +196,20 @@ There are two types of merges:
 1.Fast-forward Merge.
 2.Three-way merge/Recursive Merge
 
-###Fast-forward Merge: 
+###Fast-forward Merge:Whenever we come across a scenario where a "feature-branch" or any branch emerged from  master branch and the branch from which it emerged doesn't have any commits after that branch evolved. Then we can merge that branch staright forewared to that branch. The merge is called fast-foreward Merge 
+
+	  A---B---C feature-branch
+	 /         
+    D---E master
+After Merge
+	  A---B---C feature-branch
+	 /         |
+    D---E ---------F(merge commit) master
+    
+    
+    
+    
+
 
 
   
