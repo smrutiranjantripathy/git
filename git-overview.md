@@ -196,7 +196,8 @@ There are two types of merges:
 1.Fast-forward Merge.
 2.Three-way merge/Recursive Merge
 
-###Fast-forward Merge:Whenever we come across a scenario where a "feature-branch" or any branch emerged from  master branch and the branch from which it emerged doesn't have any commits after that branch evolved. Then we can merge that branch staright forewared to that branch. The merge is called fast-foreward Merge 
+###Fast-forward Merge:
+Whenever we come across a scenario where a "feature-branch" or any branch emerged from  master branch and the branch from which it emerged doesn't have any commits after that branch evolved. Then we can merge that branch staright forewared to that branch. The merge is called fast-foreward Merge 
           Before Merge
 
 	  A---B---C feature-branch
