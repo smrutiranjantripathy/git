@@ -210,7 +210,7 @@ Whenever we come across a scenario where a "feature-branch" or any branch emerge
 
 	  A---B---C feature-branch
 	 /         |
-    D---E ---------F(merge commit) master
+    D---E -------F(merge commit) master
     
     
     
