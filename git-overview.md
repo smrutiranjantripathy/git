@@ -168,6 +168,8 @@ Git reset moves the "HEAD" to a particular commit id.There are three types of re
  
  - To Git reset to a particular commit-id.
    - `git reset --soft/mixed/hard commit-id`
+ - To get details about commit-id.
+   - `git show <commit-id>`
 
 ##Git Reflog
 Reflog is a mechanism to record history about the tip of the branches.Once you reset the tip of the branch to an earlier commit-id; git reflog helps to revert back as the git log is reset too.
