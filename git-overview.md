@@ -234,6 +234,18 @@ In another scenario the branch from which the "feature-branch" was created might
       A---B------------C(Snapshot to Merge in)------------------ feature-branch
 	 /                                                           \            
     D---E(common ancestor)--F--G--H--I--J(Snapshot to Merge Into)---K(Merge commit) master branch
+    
+##Git Rebase
+It rewinds the current commits that are on your branch to a point where you are merging in originally diverged then playing back the commits that happened on the branch that you are wanting to bring in , after that playing on top of that any commits that have happended on the branch that you are currently on.Thus including the changes that happended on the remote branch but with your changes made ahead of them.
+
+  - If we want our commits to be ahead of remote
+    - `git pull --rebase`
+    
+  - ![alternate text](http://hades.github.io/media/git/git-rebase.png)
+    
+  
+ 
+ 
  
           
          
