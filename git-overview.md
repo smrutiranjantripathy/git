@@ -244,11 +244,12 @@ It rewinds the current commits that are on your branch to a point where you are 
   - ![alternate text](http://hades.github.io/media/git/git-rebase.png)
   - *sources http://hades.github.io/*
   
-A----------B----------C---------D  master branch
-            \ 
-             E--------F---------G  featue-branch-1
-              \
-               H-------I--------J  feature-branch-2
+         A---------B----------C---------D  master branch
+                    \ 
+                     E--------F---------G  featue-branch-1
+                      \
+                        H-------I--------J feature-branch-2
+                        
 
 Suppose you decide that you want to merge your *feature-branch-2* changes into your mainline for a release, but you want to hold off on the *feature-branch-1* changes until it’s tested further. You can take the changes on feature-branch-2 that aren’t on server (I and J) and replay them on your master branch by using the --onto option of git rebase:
   - `git rebase --onto master feature-branch-1 feature-branch-2`
