@@ -253,7 +253,7 @@ It rewinds the current commits that are on your branch to a point where you are 
 
 Suppose you decide that you want to merge your *feature-branch-2* changes into your mainline for a release, but you want to hold off on the *feature-branch-1* changes until it’s tested further. You can take the changes on feature-branch-2 that aren’t on server (I and J) and replay them on your master branch by using the --onto option of git rebase:
   - `git rebase --onto master feature-branch-1 feature-branch-2`
-  This basically says, “Check out feature-branch-2 branch, figure out the patches from the common ancestor of the feature-branch-2 and feature-branch-1 branches, and then replay them onto master.” It’s a bit complex, but the result is pretty cool.
+  This basically says, “Check out feature-branch-2 branch, figure out the patches from the common ancestor of the feature-branch-2 and feature-branch-1 branches, and then replay them onto master.” 
  
 
 ##Git Sub Modules
