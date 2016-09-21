@@ -243,7 +243,7 @@ It rewinds the current commits that are on your branch to a point where you are 
   - If we want our commits to be ahead of remote
     - `git pull --rebase`
     
-  - ![alternate text](http://hades.github.io/media/git/git-rebase.png)
+    ![alternate text](http://hades.github.io/media/git/git-rebase.png)
   - *sources http://hades.github.io/*
   
          A---------B----------C---------D  master branch
