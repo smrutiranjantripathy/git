@@ -244,7 +244,8 @@ It rewinds the current commits that are on your branch to a point where you are 
     - `git pull --rebase`
     
     ![alternate text](http://hades.github.io/media/git/git-rebase.png)
-  - *sources http://hades.github.io/*
+   
+    *sources http://hades.github.io/*
   
          A---------B----------C---------D  master branch
                     \ 
