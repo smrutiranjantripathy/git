@@ -243,7 +243,7 @@ It rewinds the current commits that are on your branch to a point where you are 
     
   - ![alternate text](http://hades.github.io/media/git/git-rebase.png)
   - *sources http://hades.github.io/*
-  - ![alternate text](https://git-scm.com/book/en/v2/ch00/rbdiag_e) 
+  - 
   
     
   
