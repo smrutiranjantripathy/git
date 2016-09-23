@@ -183,7 +183,8 @@ Tags are names for tracking changes at any arbitrary commit points.If you don't 
   - To get list of tags
   - `git tag --list`
   - To push tags to remote repository
-  - `git push --tags origin master `
+  - `git push --tags origin <branch name> `
+Relases are done with tags becuase its easier track the commit id which was on environment when we do it tag specific.
  
 
 ##Git Reflog
