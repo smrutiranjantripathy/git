@@ -302,7 +302,7 @@ Gist are a simple way to share code either entire file or just part of files.Sam
 
 Git hub Organisation are a group of related repositories.The same is team for bitbuket. It solves the problem of so many repositories owned by different persons in different accounts to one account.
 
-*sources git-scm.com*
+*Source: https://git-scm.com*
 
  
       
