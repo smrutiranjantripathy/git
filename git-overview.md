@@ -170,6 +170,21 @@ Git reset moves the "HEAD" to a particular commit id.There are three types of re
    - `git reset --soft/mixed/hard commit-id`
  - To get details about commit-id.
    - `git show <commit-id>`
+   
+##Git Tag
+Tags are names for tracking changes at any arbitrary commit points.If you don't specify the commit. It will be the current commit or head.There are two types of tags:
+  -1. Light weight tags: There is no associated information with it.
+    - `git tag <tag name>`
+    - `git tag --list`
+  -2. Annotated Tags: They have xtra information associated with it such as release information.
+    - `git tag -a <tag name> -m <Commit message>` ( -a " For annotated tag")
+  - To get the information associated with tag
+  - `git show <tag name>"
+  - To get list of tags
+  - `git tag --list`
+  - To push tags to remote repository
+  - `git push --tags origin master `
+ 
 
 ##Git Reflog
 Reflog is a mechanism to record history about the tip of the branches.Once you reset the tip of the branch to an earlier commit-id; git reflog helps to revert back as the git log is reset too.
