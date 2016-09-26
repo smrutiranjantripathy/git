@@ -278,8 +278,8 @@ Suppose you decide that you want to merge your *feature-branch-2* changes into y
 ##Git Cherry-Pick
 Applies the changes introduced by some existing commits.Given one or more existing commits, apply the change each one introduces, recording a new commit for each.
 
-![alternate text] http://hades.github.io/media/git/git-cherry-pick.png
-
+  ![alternate text](http://hades.github.io/media/git/git-cherry-pick.png)
+ 
 
 ##Git Sub Modules
 It often happens that while working on one project, you need to use another project from within it. Perhaps it’s a library that a third party developed or that you’re developing separately and using in multiple parent projects. A common issue arises in these scenarios: you want to be able to treat the two projects as separate yet still be able to use one from within the other.Git addresses this issue using submodules. Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
