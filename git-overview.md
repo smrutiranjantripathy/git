@@ -242,7 +242,7 @@ In another scenario the branch from which the "feature-branch" was created might
           Before Merge
     
        A---B---C(Snapshot to Merge in) feature-branch
-	  /         
+	      /         
     D---E(common ancestor)--F--G--H--I--J(Snapshot to Merge Into) master branch
  
 
@@ -250,7 +250,7 @@ In another scenario the branch from which the "feature-branch" was created might
           After Merge
           
       A---B------------C(Snapshot to Merge in)------------------ feature-branch
-	 /                                                           \            
+	     /                                                           \            
     D---E(common ancestor)--F--G--H--I--J(Snapshot to Merge Into)---K(Merge commit) master branch
     
 ##Git Rebase
