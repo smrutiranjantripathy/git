@@ -279,6 +279,10 @@ Suppose you decide that you want to merge your *feature-branch-2* changes into y
 Applies the changes introduced by some existing commits.Given one or more existing commits, apply the change each one introduces, recording a new commit for each.
 
   ![alternate text](http://hades.github.io/media/git/git-cherry-pick.png)
+  
+    - `git checkout staging`
+    - `git cherry-pick <commit-id>`
+ 
  
 
 ##Git Sub Modules
