@@ -159,6 +159,7 @@ Git Pull is "*Git Fetch + Git Merge*". We do a git pull to update the local resp
 **Important**: Pretty often we come across this scenario when our local branch is not updated with our remote branch and we are not able to push our commit to the remote branch.In that case the quickest solution is to do a pull and rebase simultaneouly.Rebase rewinds our commits , then pulls the commits from the reomote repositoriy's branch and plays our commit on top of it . 
 `git pull --rebase <remote-name> <branch-name>` 
 `eg: git pull --rebase origin master`
+If you are using git pull and want to make --rebase the default, you can set the pull.rebase config value with something like `git config --global pull.rebase true`.
 
 ##Git Reset
 Git reset moves the "HEAD" to a particular commit id.There are three types of reset.
