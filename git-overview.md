@@ -96,7 +96,7 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 ## Git Branching
 Branches are timelines of commits.Branch names are labels to track those timeline of commits.
   - To create a branch 
-    - `git brnach <branch-name>` 
+    - `git branch <branch-name>` 
   **Important**: When we create a branch "A" while currently checked in at branch "B" , then branch A will get created and copy the contents of branch "A".Keep this in mind while creating branches.
   - To change a branch:
     - `git checkout <branch-name>`
