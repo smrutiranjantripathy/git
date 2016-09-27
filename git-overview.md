@@ -20,7 +20,7 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 - User's Name:
   - `git config --global user.name "Your Name"`
 - User's Email:
-  - `git config --global user.name "Your Name"`
+  - `git config --global user.email `
 - To check global configuration:
   - `git config --global --list` 
 - To edit the global configuration:  
@@ -81,7 +81,7 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 1. To Get logs
   - `git log`
 2. To get logs in meaningful format
-  - `git log --online --graph --decorate --all`
+  - `git log --oneline --graph --decorate --all`
     - --online : which will provide a simplified commit entry.
     - --graph :provide an asterik based graph denoting branching hiearchy.
     - --decorate : which will tell us which commits are a part of which branches.
