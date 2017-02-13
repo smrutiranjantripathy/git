@@ -125,10 +125,16 @@ Branches are timelines of commits.Branch names are labels to track those timelin
   - To recover your file:
     - `git stash pop`
     
-## Exporting stash to another computer
+## Exporting stash or diff to another computer
 Saving the stash:
 
 ```git stash show -p > <patch file name>```
+
+Saving diff:
+
+```git diff <file-name> > <patch file name>```
+
+Export this diff/stash to another computer:
 
 Apply patch:
 
