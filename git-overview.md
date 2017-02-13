@@ -124,6 +124,17 @@ Branches are timelines of commits.Branch names are labels to track those timelin
     - `git stash list`
   - To recover your file:
     - `git stash pop`
+    
+## Exporting stash to another computer
+Saving the stash:
+
+```git stash show -p > <patch file name>```
+
+Apply patch:
+
+```git apply <patch file name>```
+
+
 
 ## Git Clone
 We use git clone to clone a remote-repository in to local system.Cloning is done using https and ssh.Public repsitories can be cloned without authentication, but for private repositories exclusive permission is required.For ssh cloning of private repositories we need to add public key at github or bitbucket settings.Https cloning requires username and password.Cloning by default clones the master branch and brings the reference to all remote branches in repository.It sets the default remote "origin" to the remote branch.
