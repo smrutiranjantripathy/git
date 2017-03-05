@@ -88,6 +88,47 @@ Note:
 Size of a file system can't be reduced in XFS.**
 
 
+When configuring LVM you will get 3 volumes 
+ * /boot,
+ * / ,
+ * swp but not /home.
+ 
+ If we want a variable to be processed by all users then we need to define the file in ~/etc/profile.
+ 
+ `/` The root directory. This is where the file system tree starts.
+
+`/bin`: In here, you find executable programs that are needed to repair a system in
+a minimal troubleshooting mode. This directory is essential during boot.
+
+`/boot`: Contains all files and directories that are needed to boot the Linux kernel.
+
+`/dev`: Device files that are used for accessing physical devices. This directory is
+essential during boot.
+
+`/etc`: Contains configuration files that are used by programs and services that
+are used on your server. This directory is essential during boot.
+
+`/home`: Used for local user home directories.
+
+`/lib`, `/lib64` Shared libraries that are used by programs in /boot, /bin and /sbin.
+
+`/media`, `/mnt` Directories that are used for mounting devices in the file system tree.
+
+`/opt` This directory is used for optional packages that may be installed on your
+server.
+
+`/proc`: This directory is used by the proc file system. This is a file system structure that gives access to kernel information.
+
+`/root`: The home directory of the root user.
+
+`/run`: Contains process and user specific information that has been created since
+the last boot.
+
+`/sbin`: Like `/bin`, but for system administration commands that are not necessarily needed by regular users.
+
+
+
+
 
 
 
