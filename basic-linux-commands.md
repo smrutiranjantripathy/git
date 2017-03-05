@@ -147,14 +147,15 @@ be considered. Without extra options, you risk permissions not being copied. If 
 want to make sure that you keep the current permissions, use the `-a `option, which
 has cp work in archive mode.
 
-■ cp /somedir/.* /tmp This copies all files that have a name starting with a
+ * cp /somedir/.* /tmp This copies all files that have a name starting with a
 dot (the hidden files, that is) to /tmp. It gives an error message for directories
 whose name starts with a dot in /somedir, because the -R option was not used.
-■ cp -a /somedir/ . This copies the entire directory /somedir, including its
+
+ * cp -a /somedir/ . This copies the entire directory /somedir, including its
 contents, to the current directory. So, as a result, a subdirectory somedir will
 be created in the current directory.
-■ cp -a /somedir/. . This copies all files, regular and hidden, to the current
-directory.
+
+* cp -a /somedir/. . This copies all files, regular and hidden, to the current directory.
 
 
 
