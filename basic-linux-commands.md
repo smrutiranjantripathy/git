@@ -5,6 +5,9 @@ Regularly used linux commands
   
   `alias`
   
+  
+`type < command name> `: To check whether it is external or internal command.  
+  
 ###Standard Input Output:
 ----------------------
 ```
@@ -27,6 +30,85 @@ Your hard disk for instance can be referred to as `/dev/sda`, the console of you
 `~/.bash_profile`: In this file, user-specific login shell variables can be defined.
 
 `~/.bashrc`: In this user-specific file, subshell variables can be defined.
+
+`LANG` varibale is used to set the language for linux.
+
+*To fileter the output of man with respect system administration:*
+
+* 1: Executable programs or shell commands
+* 5: File formats and conventions
+* 8: System administration commands
+
+**example:**
+`man -k partition | grep 8`
+
+To update man pages:
+`sudo mandb`
+
+`info` command also prvides information.
+
+Some important points of documenattion are found at /usr/share/doc. ( That may contain critical administrative tasks).
+
+To edit the welcome message /etc/issue.
+`/etc/motd` - Displays the messgae after a user is logged in.
+
+For Ubuntu Based Systems these files will be found at:
+`/etc/update-motd.d/`
+Details: http://www.howtogeek.com/104708/how-to-customize-ubuntus-message-of-the-day/
+
+File descriptor A pointer that is used by a Linux process to refer to files that are in use by the process.
+
+Shell The environment from which commands can be executed. Bash is the default shell on Linux, but other shells exist as well.
+
+**Internal command:** A command that is a part of the shell and does not exist as a file on disk.
+**External command:** A command that exists as a file on disk.
+
+**Path:** The complete reference to the location of a file.
+
+**Pipe:** A structure that can be used to forward the output of one command to be
+used as input for another command
+
+**Redirect:** Method where something is sent somewhere else. Used mainly in DNS.
+
+**Device file:** A file that is created in the /dev directory and that is used to represent
+and interact with a device.
+
+**Environment:** The collection of settings that users or processes are using to do their work.
+
+**Subshell:** A shell that is started from another shell. Typically, by running a shell
+script a subshell is started.
+
+**Login shell:** The shell that is opened directly after a user has logged in.
+
+Note:
+
+*File System Info*
+
+**The default file system of Red Hat "XFS".Key Differnce between XFS and EXT4
+Size of a file system can't be reduced in XFS.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
  
