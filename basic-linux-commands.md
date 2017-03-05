@@ -126,6 +126,37 @@ the last boot.
 
 `/sbin`: Like `/bin`, but for system administration commands that are not necessarily needed by regular users.
 
+###To get the list of mounts 
+mount command which reads from /proc/mount.
+
+`df -Th` - To see mounts and the file system.
+
+Wildcard Use
+
+`*` Refers to an unlimited number of all characters. `ls *` , for instance, shows all files
+in the current directory (except those that have a name starting with a dot).
+
+`?` Used to refer to one specific character that can be any character. ls c?t would
+match cat as well as cut.
+
+`[auo]` Refers to one character that may be selected from the range that is specified
+between square brackets. ls c[auo]t would match cat, cut, and cot.
+
+While using the cp command, permissions and other properties of the files are to
+be considered. Without extra options, you risk permissions not being copied. If you
+want to make sure that you keep the current permissions, use the `-a `option, which
+has cp work in archive mode.
+
+■ cp /somedir/.* /tmp This copies all files that have a name starting with a
+dot (the hidden files, that is) to /tmp. It gives an error message for directories
+whose name starts with a dot in /somedir, because the -R option was not used.
+■ cp -a /somedir/ . This copies the entire directory /somedir, including its
+contents, to the current directory. So, as a result, a subdirectory somedir will
+be created in the current directory.
+■ cp -a /somedir/. . This copies all files, regular and hidden, to the current
+directory.
+
+
 
 
 
