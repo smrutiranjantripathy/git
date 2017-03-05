@@ -157,6 +157,20 @@ be created in the current directory.
 
 * cp -a /somedir/. . This copies all files, regular and hidden, to the current directory.
 
+To copy all files that have a name starting with a,b,c  in your home directory
+`cp -a /somedire/[abc]*` .
+
+To add a file to an archive, you use the -r options.
+Use for instance `tar -rvf /root/homes.tar /etc/hosts` to add the `/etc/hosts` file to
+the archive.
+
+To update a currently existing archive file, you can use the -u option. So, use `tar -uvf /root/homes.tar /home` to write newer versions of all files in /home to the archive.
+
+
+
+
+
+
 
 
 
