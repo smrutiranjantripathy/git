@@ -76,8 +76,9 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
      -`git config --global push.default matching `
    If we want to stick to new behaviour:
      - `git config --global push.default simple`
-7. Rewriting the most recent commit message
-     - `git commit --amend`
+7. Rewriting the most recent commit message:
+   - `git commit --amend`   
+  In your text editor, edit the commit message and save the commit.The new commit and message will appear on GitHub the next time you push.
       
 ## Git Logs
 1. To Get logs
