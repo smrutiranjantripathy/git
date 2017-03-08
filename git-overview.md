@@ -79,7 +79,17 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
 7. Rewriting the most recent commit message:
    - `git commit --amend`   
   In your text editor, edit the commit message and save the commit.The new commit and message will appear on GitHub the next time you push.
-      
+   -  `git rebase -i HEAD~n`  command to display a list of the last n commits in your default text editor.
+   Replace pick with reword before each commit message you want to change.
+   ``` Commands:
+   p, pick = use commit
+   r, reword = use commit, but edit the commit message
+   e, edit = use commit, but stop for amending
+   s, squash = use commit, but meld into previous commit
+   f, fixup = like "squash", but discard this commit's log message
+   x, exec = run command (the rest of the line) using shell
+   ```       
+   
 ## Git Logs
 1. To Get logs
   - `git log`
