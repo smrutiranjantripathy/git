@@ -80,7 +80,9 @@ Git was developed by Linus Trovalds for managing the linux source code.Earlier i
    - `git commit --amend`   
   In your text editor, edit the commit message and save the commit.The new commit and message will appear on GitHub the next time you push.
    -  `git rebase -i HEAD~n`  command to display a list of the last n commits in your default text editor.
-   Replace pick with reword before each commit message you want to change.
+   Replace pick with reword before each commit message you want to change
+    
+     **The list of Settings :**
    ``` Commands:
    p, pick = use commit
    r, reword = use commit, but edit the commit message
